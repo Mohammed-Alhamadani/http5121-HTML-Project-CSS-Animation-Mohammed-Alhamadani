@@ -1,0 +1,122 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+.container {
+    position: fixed;
+    left: 800px;
+    max-width: 800px;
+    margin: 40px auto;
+
+}
+
+.weather-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather {
+    margin-bottom: 20px;
+}
+
+#conditions {
+    margin: 20px;
+}
+
+.forecast {
+    margin-top: 20px;
+}
+
+#getDataCountry {
+    display: none;
+}
+
+.location-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin 10s linear infinite;
+}
+
+.weather-conditions {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.weather-conditions,.show {
+    opacity: 1;
+}
+.sunny {
+
+    background-image: url('/images/sunny-svgrepo-com.svg');
+    width: 500px;
+    height: 500px;
+    background-size: 50px 50px;
+    animation: sunny-animation 3s ease-in-out;
+}
+
+@keyframes sunny-animation {
+    0% {
+transform: scale(0.5);
+    }
+    100% {
+transform: scale(1);
+    }
+}
+
+
+.cloudy {
+    background-image: url('/images/cloud.svg');
+    width: 500px;
+    height: 500px;
+    background-size: 50px 50px;
+    animation: cloudy-animation 3s ease-in-out;
+}
+
+@keyframes cloudy-animation {
+    0% {
+transform: translateX(-500px);
+    }
+    100%{
+transform: translateX(0px);
+    }
+}
+
+.rainy {
+    background-image: url('/images/rain.svg');
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    animation: rainy-animation 3s ease-in-out;
+}
+
+@keyframes rainy-animation {
+    0% {
+transform: rotate(0deg);
+    }
+    100% {
+transform: rotate(360deg);
+    }
+}
+
+
